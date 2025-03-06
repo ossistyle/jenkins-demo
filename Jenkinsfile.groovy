@@ -1,9 +1,13 @@
+// https://code-maven.com/jenkins-pipeline-running-external-programs
+
 pipeline {
     agent any
     stages {
         stage('Start VM') {
             steps {
                 sh 'echo start vm'
+                sh "hostname"
+                sh "uptime"
             }
         }
 
